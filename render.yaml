@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: xauusd-news-bias-ai
-    runtime: node
-    buildCommand: npm install
-    startCommand: npm start
-    healthCheckPath: /api/health
