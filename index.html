@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05080e">
+<title>XAU Fundamental AI</title>
+<style>
+:root{--bg:#05080e;--panel:#0d1522;--panel2:#101927;--line:#1b2a40;--text:#edf4ff;--muted:#74839b;--gold:#f2bd5d;--green:#22d49b;--red:#ff5275;--blue:#6ea8ff}
+*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;background:radial-gradient(circle at 70% -10%,#1a2c4b 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{width:255px;position:fixed;left:0;top:0;bottom:0;background:rgba(5,8,14,.97);border-right:1px solid var(--line);padding:22px 15px;z-index:5}main{margin-left:255px;width:calc(100% - 255px);padding:28px;max-width:1600px}.brand{display:flex;align-items:center;gap:11px;margin-bottom:27px}.brand-logo{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#f5d77e,#ed9650);color:#111;font-size:20px;font-weight:1000;box-shadow:0 8px 30px #e6aa4930}.brand-name{font-weight:1000;letter-spacing:.7px}.brand-name span{color:var(--gold)}.brand-sub{display:block;color:#65748c;font-size:8px;letter-spacing:1.7px;margin-top:3px}.connection{background:#0b121d;border:1px solid var(--line);border-radius:11px;padding:12px;display:flex;gap:9px;margin-bottom:22px}.connection-dot{width:8px;height:8px;margin-top:4px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}.connection b{display:block;font-size:9px}.connection small{display:block;margin-top:3px;color:var(--muted);font-size:8px}.nav{width:100%;display:block;text-align:left;padding:12px;margin-bottom:5px;border-radius:8px;border:1px solid transparent;background:transparent;color:#8190a8}.nav:hover,.nav.active{background:#101a2a;border-color:#1d2d47;color:white}.sidebar-note{position:absolute;left:15px;right:15px;bottom:20px;color:#4c5a72;font-size:9px;line-height:1.5}.header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:25px}.eyebrow{color:#66758f;font-size:9px;letter-spacing:1.7px;font-weight:900}.header h1{font-size:27px;margin-top:7px}.header-right{display:flex;align-items:center;gap:9px;color:#697891;font-size:10px}.icon-button,.button{border:1px solid #24354d;background:#101827;color:#d4deee;border-radius:8px;padding:9px 13px}.button.primary{border:0;color:#111;font-weight:900;background:linear-gradient(135deg,#f4cd6d,#eb9650)}.tab.hidden{display:none}.hero{display:flex;justify-content:space-between;align-items:center;padding:31px;border-radius:18px;border:1px solid #1c2d48;background:linear-gradient(135deg,#111c2f,#090f17 76%);box-shadow:0 25px 80px rgba(0,0,0,.35)}.label{color:#687893;font-size:9px;letter-spacing:1.5px;font-weight:900}.direction{margin:8px 0;font-size:64px;line-height:1;letter-spacing:-4px;font-weight:1000;color:var(--red)}.direction.buy{color:var(--green)}.direction.neutral{color:var(--gold)}.hero-text{max-width:800px;color:#aab7ca;line-height:1.55;font-size:12px}.badges{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap}.badge{border:1px solid #2a3b57;border-radius:6px;padding:6px 9px;color:#91a1bb;font-size:8px;font-weight:900;letter-spacing:.8px}.confidence{text-align:center}.confidence-ring{width:118px;height:118px;display:grid;place-items:center;border-radius:50%;border:10px solid #273750;font-size:25px;font-weight:1000}.confidence small{display:block;margin-top:7px;color:#687790;font-size:9px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}.stat{background:linear-gradient(180deg,#0e1623,#090e16);border:1px solid var(--line);border-radius:12px;padding:17px}.stat-label{color:#6c7a93;font-size:8px;letter-spacing:1.3px;font-weight:900}.stat-value{display:block;margin-top:9px;font-size:24px;font-weight:1000}.stat-sub{display:block;margin-top:3px;color:#56647b;font-size:9px}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}.panel{background:linear-gradient(180deg,#0d1522,#090e16);border:1px solid var(--line);border-radius:12px;padding:20px}.panel-header{display:flex;justify-content:space-between}.panel-header h2{margin-top:5px;font-size:16px}.live{color:var(--green);font-size:8px;font-weight:900}.reasons{margin-top:14px}.reason{padding:13px 0;border-top:1px solid #172337;color:#aebbd0;font-size:11px;line-height:1.5}.reason:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px}.macro-map{margin-top:13px}.macro-row{display:flex;justify-content:space-between;padding:11px 0}.macro-row span{color:#8190a8;font-size:11px}.macro-row b{font-size:11px}.arrow{text-align:center;color:#40506a;padding:1px}.buy{color:var(--green)!important}.sell{color:var(--red)!important}.neutral{color:var(--gold)!important}.disclaimer{margin-top:12px;padding:13px 15px;border-radius:9px;border:1px solid #392e1c;background:#15120d;color:#95886d;font-size:9px;line-height:1.55}.page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.page-header h2{font-size:20px;margin-top:5px}.page-header input{background:#0d1521;border:1px solid var(--line);color:white;padding:8px;border-radius:7px}.calendar{display:grid;gap:9px}.event{display:grid;grid-template-columns:100px 1fr 90px 210px;gap:14px;align-items:center;padding:15px;background:#0d1421;border:1px solid var(--line);border-radius:10px}.event-date{color:#72809a;font-size:9px}.event-title b{display:block;font-size:12px}.event-title small{display:block;color:#61708a;margin-top:4px;font-size:8px}.impact{text-align:center;padding:6px;border-radius:5px;background:#302116;color:#eead71;font-size:8px;font-weight:900}.values{color:#738199;font-size:9px}.news{display:grid;gap:9px}.news-card{padding:16px;background:#0d1421;border:1px solid var(--line);border-radius:10px}.news-card a{color:#edf4ff;text-decoration:none;font-size:12px;font-weight:750}.news-card a:hover{color:var(--gold)}.news-card small{display:block;color:#64728b;font-size:8px;margin-top:8px}.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:17px}.field label{display:block;color:#77859d;font-size:9px}.field input,.field select{width:100%;margin-top:5px;padding:10px;background:#080d15;border:1px solid var(--line);color:white;border-radius:7px}.scenario-result{margin-top:15px}.result{padding:18px;border:1px solid var(--line);border-radius:10px;background:#080e16}.result-direction{font-size:31px;font-weight:1000}.result-info{margin-top:5px;color:#738199;font-size:10px}.result-description{margin-top:10px;color:#9eacc0;font-size:11px;line-height:1.5}.endpoint{display:grid;grid-template-columns:55px 1fr 1.5fr;gap:10px;padding:13px 0;border-bottom:1px solid #172337;align-items:center}.endpoint-method{color:var(--gold);font-size:8px;font-weight:900}.endpoint code{color:#c6d5ed;font-size:10px}.endpoint span{color:#697790;font-size:9px}pre{margin-top:18px;padding:15px;background:#070c13;border:1px solid var(--line);border-radius:9px;overflow:auto;color:#9db1d0;font-size:10px}.loading{color:#697790;font-size:11px;padding:20px}.error{color:var(--red);padding:15px}.muted{color:var(--muted);font-size:10px}@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{width:100%;margin:0;padding:16px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:22px}.event{grid-template-columns:80px 1fr 75px}.values{display:none}.sidebar-note{display:none}}@media(max-width:600px){.header h1{font-size:21px}.header-right span{display:none}.hero{display:block}.direction{font-size:49px}.confidence{margin-top:23px}.stats{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.event{grid-template-columns:1fr 75px}.event-date{display:none}.nav{width:49%;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-logo">X</div><div><div class="brand-name">XAU<span>FUND</span></div><small class="brand-sub">FUNDAMENTAL AI</small></div></div>
+  <div class="connection"><div class="connection-dot"></div><div><b>MACRO ENGINE</b><small id="connectionText">Connecting...</small></div></div>
+  <button class="nav active" data-tab="overview">◈ Overview</button>
+  <button class="nav" data-tab="calendar">◷ Economic Calendar</button>
+  <button class="nav" data-tab="news">◉ News Radar</button>
+  <button class="nav" data-tab="scenario">◌ Scenario Lab</button>
+  <button class="nav" data-tab="api">⌘ API</button>
+  <div class="sidebar-note">Fundamental bias estimates macro pressure on gold. It is not a guaranteed next-candle signal.</div>
+</aside>
+
+<main>
+<header class="header">
+  <div><div class="eyebrow">XAUUSD / MACRO INTELLIGENCE</div><h1>Gold Fundamental Terminal</h1></div>
+  <div class="header-right"><span id="lastUpdate">Waiting...</span><button class="icon-button" id="refresh">↻</button></div>
+</header>
+
+<section id="overview" class="tab">
+  <div class="hero">
+    <div>
+      <div class="label">FUNDAMENTAL XAUUSD BIAS</div>
+      <div id="direction" class="direction">LOADING</div>
+      <p id="interpretation" class="hero-text">Connecting to the fundamental engine...</p>
+      <div class="badges"><span class="badge">FUNDAMENTAL</span><span id="confidenceBadge" class="badge">CONFIDENCE --%</span><span id="scoreBadge" class="badge">SCORE --</span></div>
+    </div>
+    <div class="confidence"><div id="confidenceRing" class="confidence-ring">--%</div><small>MODEL CONFIDENCE</small></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-label">CPI YOY</span><span id="cpi" class="stat-value">--</span><span id="cpiDate" class="stat-sub">Waiting...</span></div>
+    <div class="stat"><span class="stat-label">CORE CPI YOY</span><span id="coreCpi" class="stat-value">--</span><span id="coreDate" class="stat-sub">Waiting...</span></div>
+    <div class="stat"><span class="stat-label">PPI YOY</span><span id="ppi" class="stat-value">--</span><span id="ppiDate" class="stat-sub">Waiting...</span></div>
+    <div class="stat"><span class="stat-label">FUNDAMENTAL SCORE</span><span id="score" class="stat-value">--</span><span class="stat-sub">-100 bearish / +100 bullish</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="panel"><div class="panel-header"><div><div class="label">DECISION TRACE</div><h2>Why the model says this</h2></div><span class="live">● LIVE</span></div><div id="reasons" class="reasons"><div class="loading">Waiting for macro data...</div></div></div>
+    <div class="panel"><div class="panel-header"><div><div class="label">MACRO TRANSMISSION</div><h2>Gold Pressure Map</h2></div></div>
+      <div class="macro-map">
+        <div class="macro-row"><span>Inflation</span><b id="inflation">--</b></div><div class="arrow">↓</div>
+        <div class="macro-row"><span>Fed policy</span><b id="fed">--</b></div><div class="arrow">↓</div>
+        <div class="macro-row"><span>USD / Real Yields</span><b id="yields">--</b></div><div class="arrow">↓</div>
+        <div class="macro-row"><span>XAUUSD</span><b id="gold">--</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer"><b>Important:</b> Fundamental bias is different from predicting the next candle. Expectations, positioning, liquidity and technical factors can dominate short-term price action.</div>
+</section>
+
+<section id="calendar" class="tab hidden">
+  <div class="page-header"><div><div class="eyebrow">US MACRO</div><h2>Economic Calendar</h2></div><input type="month" id="calendarMonth"></div>
+  <div id="calendarList" class="calendar"><div class="panel loading">Loading calendar...</div></div>
+</section>
+
+<section id="news" class="tab hidden">
+  <div class="page-header"><div><div class="eyebrow">GLOBAL MACRO FLOW</div><h2>News Radar</h2></div><button class="button" id="refreshNews">Refresh</button></div>
+  <div id="newsList" class="news"><div class="panel loading">Loading news...</div></div>
+</section>
+
+<section id="scenario" class="tab hidden">
+  <div class="page-header"><div><div class="eyebrow">WHAT-IF ANALYSIS</div><h2>Fundamental Scenario Lab</h2></div></div>
+  <div class="panel">
+    <p class="muted">Test hypothetical CPI, Core CPI, PPI and Fed scenarios. The same scoring engine is used by the live bias endpoint.</p>
+    <div class="form-grid">
+      <div class="field"><label>CPI Actual</label><input id="cpiActual" type="number" step="0.1" placeholder="3.2"></div>
+      <div class="field"><label>CPI Forecast</label><input id="cpiForecast" type="number" step="0.1" placeholder="3.0"></div>
+      <div class="field"><label>CPI Previous</label><input id="cpiPrevious" type="number" step="0.1" placeholder="3.1"></div>
+      <div class="field"><label>Core CPI Actual</label><input id="coreActual" type="number" step="0.1" placeholder="3.1"></div>
+      <div class="field"><label>Core CPI Forecast</label><input id="coreForecast" type="number" step="0.1" placeholder="3.0"></div>
+      <div class="field"><label>Core CPI Previous</label><input id="corePrevious" type="number" step="0.1" placeholder="3.0"></div>
+      <div class="field"><label>PPI Actual</label><input id="ppiActual" type="number" step="0.1" placeholder="4.0"></div>
+      <div class="field"><label>PPI Forecast</label><input id="ppiForecast" type="number" step="0.1" placeholder="3.5"></div>
+      <div class="field"><label>PPI Previous</label><input id="ppiPrevious" type="number" step="0.1" placeholder="3.8"></div>
+      <div class="field"><label>Federal Reserve Tone</label><select id="fedTone"><option value="">Neutral / Unknown</option><option value="hawkish">Hawkish</option><option value="dovish">Dovish</option></select></div>
+    </div>
+    <button id="runScenario" class="button primary" style="margin-top:15px">Run Fundamental Scan</button>
+    <div id="scenarioResult" class="scenario-result"></div>
+  </div>
+</section>
+
+<section id="api" class="tab hidden">
+  <div class="page-header"><div><div class="eyebrow">DEVELOPER</div><h2>XAU Fundamental API</h2></div></div>
+  <div class="panel">
+    <div class="endpoint"><b class="endpoint-method">GET</b><code>/api/bias</code><span>Current XAUUSD fundamental bias</span></div>
+    <div class="endpoint"><b class="endpoint-method">GET</b><code>/api/macro</code><span>CPI / Core CPI / PPI data</span></div>
+    <div class="endpoint"><b class="endpoint-method">GET</b><code>/api/news</code><span>Latest macro news</span></div>
+    <div class="endpoint"><b class="endpoint-method">GET</b><code>/api/calendar</code><span>Monthly economic calendar</span></div>
+    <div class="endpoint"><b class="endpoint-method">POST</b><code>/api/bias/scenario</code><span>Custom fundamental scenario</span></div>
+    <pre>GET /api/bias
+
+{
+  "instrument": "XAUUSD",
+  "mode": "fundamental",
+  "direction": "BUY",
+  "score": 42,
+  "confidence": 69
+}</pre>
+  </div>
+</section>
+</main>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+async function api(url,opt={}){const r=await fetch(url,opt);if(!r.ok){let m=r.statusText;try{const d=await r.json();m=d.detail||d.error||m}catch{}throw Error(m)}return r.json()}
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function num(v){const n=Number(v);return Number.isFinite(n)?n.toFixed(2):"--"}
+function score(v){const n=Number(v);return Number.isFinite(n)?(n>0?"+":"")+n:"--"}
+function color(el,d){el.classList.remove("buy","sell","neutral");el.classList.add(d==="BUY"?"buy":d==="SELL"?"sell":"neutral")}
+
+document.querySelectorAll(".nav").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".nav").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".tab").forEach(x=>x.classList.add("hidden"));
+  b.classList.add("active");$("#"+b.dataset.tab).classList.remove("hidden");
+  if(b.dataset.tab==="calendar")loadCalendar(); if(b.dataset.tab==="news")loadNews();
+});
+
+async function loadBias(){
+  try{
+    const d=await api("/api/bias"),dir=d.direction||"NEUTRAL",conf=Number(d.confidence||0),sc=Number(d.score||0);
+    $("#direction").textContent=dir;$("#direction").className="direction "+dir.toLowerCase();
+    $("#confidenceRing").textContent=conf+"%";$("#confidenceBadge").textContent="CONFIDENCE "+conf+"%";$("#scoreBadge").textContent="SCORE "+score(sc);$("#score").textContent=score(sc);
+    $("#interpretation").textContent=d.interpretation||"No interpretation available.";
+    const m=d.macro||{};
+    if(m.cpi){$("#cpi").textContent=m.cpi.yoy==null?"--":num(m.cpi.yoy)+"%";if(m.cpi.latest)$("#cpiDate").textContent=m.cpi.latest.year+" "+m.cpi.latest.period}
+    if(m.coreCpi){$("#coreCpi").textContent=m.coreCpi.yoy==null?"--":num(m.coreCpi.yoy)+"%";if(m.coreCpi.latest)$("#coreDate").textContent=m.coreCpi.latest.year+" "+m.coreCpi.latest.period}
+    if(m.ppi){$("#ppi").textContent=m.ppi.yoy==null?"--":num(m.ppi.yoy)+"%";if(m.ppi.latest)$("#ppiDate").textContent=m.ppi.latest.year+" "+m.ppi.latest.period}
+    $("#reasons").innerHTML=(d.reasons||[]).map(x=>`<div class="reason">${esc(x)}</div>`).join("")||'<div class="loading">No decision trace returned.</div>';
+    const negative=sc<0,positive=sc>0;
+    $("#inflation").textContent=negative?"Inflationary / hawkish pressure":positive?"Disinflationary":"Mixed";
+    $("#fed").textContent=negative?"More restrictive":positive?"Less restrictive":"Unclear";
+    $("#yields").textContent=negative?"Upward pressure":positive?"Downward pressure":"Mixed";
+    $("#gold").textContent=dir;
+    [$("#inflation"),$("#fed"),$("#yields")].forEach(e=>color(e,negative?"SELL":positive?"BUY":"NEUTRAL"));color($("#gold"),dir);
+    $("#connectionText").textContent="Live backend connected";$("#lastUpdate").textContent="Updated "+new Date().toLocaleTimeString();
+  }catch(e){$("#connectionText").textContent="Backend unavailable";$("#interpretation").textContent="Cannot connect to API: "+e.message;$("#lastUpdate").textContent="Connection error"}
+}
+
+async function loadNews(){
+  const c=$("#newsList");c.innerHTML='<div class="panel loading">Loading macro news...</div>';
+  try{const d=await api("/api/news"),a=d.articles||[];c.innerHTML=a.length?a.map(x=>`<article class="news-card"><a href="${esc(x.url||"#")}" target="_blank" rel="noopener">${esc(x.title||"Untitled")}</a><small>${esc(x.domain||"News")}${x.date?" · "+esc(x.date):""}</small></article>`).join(""):'<div class="panel loading">No news returned.</div>'}
+  catch(e){c.innerHTML=`<div class="panel error">News unavailable: ${esc(e.message)}</div>`}
+}
+
+$("#calendarMonth").value=new Date().toISOString().slice(0,7);
+$("#calendarMonth").onchange=loadCalendar;
+async function loadCalendar(){
+  const c=$("#calendarList"),month=$("#calendarMonth").value;c.innerHTML='<div class="panel loading">Loading economic calendar...</div>';
+  try{const d=await api("/api/calendar?month="+encodeURIComponent(month)),a=d.events||[];
+    c.innerHTML=a.length?a.map(x=>`<article class="event"><div class="event-date">${esc(x.date||"--")}</div><div class="event-title"><b>${esc(x.title||"Macro event")}</b><small>${esc(x.category||"USD")}</small></div><div class="impact">${esc(x.impact||"MEDIUM")}</div><div class="values">A / F / P: ${esc(x.actual??"—")} / ${esc(x.forecast??"—")} / ${esc(x.previous??"—")}</div></article>`).join(""):'<div class="panel loading">No events returned. Configure a calendar provider in .env for live forecast/actual/previous values.</div>';
+  }catch(e){c.innerHTML=`<div class="panel error">Calendar unavailable: ${esc(e.message)}</div>`}
+}
+
+function val(id){const n=Number($("#"+id).value);return Number.isFinite(n)?n:null}
+$("#runScenario").onclick=async()=>{
+  const out=$("#scenarioResult");out.innerHTML='<div class="panel loading">Running fundamental engine...</div>';
+  try{
+    const d=await api("/api/bias/scenario",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+      cpi:{actual:val("cpiActual"),forecast:val("cpiForecast"),previous:val("cpiPrevious")},
+      coreCpi:{actual:val("coreActual"),forecast:val("coreForecast"),previous:val("corePrevious")},
+      ppi:{actual:val("ppiActual"),forecast:val("ppiForecast"),previous:val("ppiPrevious")},
+      fedTone:$("#fedTone").value
+    })});
+    const dir=d.direction||"NEUTRAL";out.innerHTML=`<div class="result"><div class="result-direction ${dir==="BUY"?"buy":dir==="SELL"?"sell":"neutral"}">${esc(dir)}</div><div class="result-info">Score: ${score(d.score)} · Confidence: ${Number(d.confidence||0)}%</div><div class="result-description">${esc(d.interpretation||"")}</div><div class="reasons">${(d.reasons||[]).map(x=>`<div class="reason">${esc(x)}</div>`).join("")}</div></div>`;
+  }catch(e){out.innerHTML=`<div class="panel error">Scenario error: ${esc(e.message)}</div>`}
+};
+$("#refresh").onclick=loadBias;$("#refreshNews").onclick=loadNews;loadBias();
+</script>
+</body>
+</html>
