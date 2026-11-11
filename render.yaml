@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xau-fundamental-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
